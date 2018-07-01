@@ -3,6 +3,8 @@ package com.ghulam.splashScreen;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.ghulam.database.Database;
+
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,5 +30,7 @@ public class SplashScreen implements Initializable {
 		ft.setCycleCount(FadeTransition.INDEFINITE);
 		ft.setAutoReverse(true);
 		ft.play();
+		new Database().initDatabase();
 	}
+
 }

@@ -6,12 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Modality;
 
 public class Database {
-	private static Connection conn = null;
+	private static Connection conn;
 	private PreparedStatement pst = null;
 	private ResultSet rs = null;
 	private static Alert alert = null;
@@ -21,58 +24,74 @@ public class Database {
 		alert = new Alert(Alert.AlertType.ERROR);
 		alert.setHeaderText("Error");
 		alert.setHeaderText(null);
-		alert.initModality(Modality.WINDOW_MODAL);
+		alert.initModality(Modality.APPLICATION_MODAL);
 	}
 
-	public static Connection getConnection() {
+	public final static Connection getConnection() {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "Ghulam", "Ghulam");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "Ghulam", "ghulam");
 			return conn;
 		} catch (Exception e) {
 			alert.setContentText(e.toString());
-			alert.show();
-			return null;
+			alert.showAndWait();
+			createUsername();
 		}
+		return null;
 	}
 
-	public Connection getConnection(String systemPass) {
+	private static Connection getConnection(String systemPass) {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "System", systemPass);
 			return conn;
 		} catch (Exception e) {
 			alert.setContentText(e.toString());
-			alert.show();
-			return null;
+			alert.showAndWait();
 		}
+		return null;
 	}
 
-	public void initDatabase(String systemPass) {
-		conn = getConnection(systemPass);
-		checkUsername();
-		conn = getConnection();
+	public void initDatabase() {
+		while (conn == null) {
+			conn = getConnection();
+		}
 		checkUserTable();
 		checkStudentTable();
 		checkBookTable();
 		checkBookIssueTable();
 	}
 
-	private void checkUsername() {
-		String sql1 = "SELECT USERNAME from DBA_USERS WHERE UPPER(USERNAME)='GHULAM'";
+	private static void createUsername() {
+		while (conn == null) {
+			conn = getConnection(getDbSystemPass());
+		}
 		try {
 			Statement st = conn.createStatement();
-			rs = st.executeQuery(sql1);
-			if (rs.next())
-				return;
-			else {
-				st.execute("CREATE USER GHULAM IDENTIFIED BY Ghulam");
-				st.execute("GRANT DBA TO GHULAM");
-			}
+			st.execute("CREATE USER GHULAM IDENTIFIED BY ghulam");
+			st.execute("GRANT DBA TO GHULAM");
 		} catch (SQLException e) {
-			alert.setContentText(e.toString());
-			alert.show();
+			alert.setContentText("Username already exist\nPlease delete Ghulam user !!!\nRun again");
+			alert.showAndWait();
+		} finally {
+			conn = null;
 		}
+	}
+
+	private static String getDbSystemPass() {
+		String pass = null;
+		TextInputDialog dialog = new TextInputDialog("Ghulam");
+		dialog.setTitle("Text Input Dialog");
+		dialog.setHeaderText(null);
+		dialog.setContentText("Please enter oracle system password:");
+		Optional<String> result = dialog.showAndWait();
+		if (result.isPresent()) {
+			return (result.get());
+		} else {
+			Platform.exit();
+			System.exit(0);
+		}
+		return null;
 	}
 
 	private void checkUserTable() {
