@@ -8,9 +8,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 public class SplashScreen implements Initializable {
+	@FXML
+	private StackPane stackPane;
+	@FXML
 	private AnchorPane rootPane;
 	@FXML
 	private Label txtMsg;
