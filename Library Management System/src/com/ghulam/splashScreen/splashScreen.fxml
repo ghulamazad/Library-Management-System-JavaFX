@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" prefHeight="325.0" prefWidth="679.0" styleClass="roundPane" stylesheets="@splashScreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.splashScreen.SplashScreen">
+   <children>
+      <AnchorPane id="ROOTNODE" fx:id="rootPane" prefHeight="307.0" prefWidth="683.0">
+         <children>
+            <Label id="txtMsg" fx:id="txtMsg" alignment="CENTER" layoutX="6.0" layoutY="136.0" prefHeight="53.0" prefWidth="660.0" text="Loading..." textFill="#fffffffa">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="377.0" layoutY="291.0" prefHeight="27.0" prefWidth="291.0" text="DESIGN &amp; DEVELOPED BY : MD.GHULAM AZAD ANSARI" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="6.0">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="5.0" prefHeight="39.0" prefWidth="668.0" text="Library Management System" textFill="WHITE" underline="true" AnchorPane.topAnchor="6.0">
+               <font>
+                  <Font name="Cambria" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="277.0" prefHeight="27.0" prefWidth="338.0" text="MAN OF ACTION WORLDWIDE  © 2018 ALL RIGHTS RESERVED" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="6.0">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

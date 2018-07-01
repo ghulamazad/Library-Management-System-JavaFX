@@ -1,0 +1,12 @@
+#ROOTNODE {
+    -fx-background-image: url("../images/splashScreen.png");
+    -fx-background-radius: 26;
+    -fx-border-radius:26px;
+    -fx-border-color:TRANSPARENT ;
+}
+
+.roundPane {
+    -fx-background-color:TRANSPARENT ;
+    -fx-background-radius: 26px;
+    -fx-border-radius:26px;
+}
