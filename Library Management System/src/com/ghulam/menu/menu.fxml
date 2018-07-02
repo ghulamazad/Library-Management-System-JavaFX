@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stackRootPane" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.menu.MenuController">
+   <children>
+      <AnchorPane fx:id="anchorPane">
+         <children>
+            <BorderPane layoutX="69.0" layoutY="40.0" prefHeight="706.0" prefWidth="1001.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="536.0" prefWidth="266.0" styleClass="menuPane" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="266.0" styleClass="menuPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="72.0" prefWidth="266.0" text="Library Management System">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="1.0" prefWidth="254.0">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                              </Separator>
+                              <JFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="16.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnDashboardClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="Dashboard" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fx:id="imgDashboard" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dashboard_black.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnIsuueReturnBook" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="16.0" layoutY="103.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnIsuueReturnBookClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="Issue / Return Book">
+                                 <graphic>
+                                    <ImageView fx:id="imgIsuueReturnBook" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/return_issueBook_balck.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="btnStudentInfo" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="10.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnStudentInfoClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="Student Info">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fx:id="imgStudentInfo" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/students_black.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnBookInfo" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="61.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnBookInfoClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="Book Info">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fx:id="imgBookInfo" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/books_black.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnSetting" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="163.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnSettingClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="Setting">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fx:id="imgSetting" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/setting_black.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnAbout" alignment="BASELINE_LEFT" graphicTextGap="16.0" layoutX="10.0" layoutY="214.0" maxHeight="56.0" maxWidth="256.0" minHeight="56.0" minWidth="256.0" onAction="#btnAboutClick" onMouseEntered="#menuButtonMouseEntered" onMouseExited="#menuButtonMouseExited" prefHeight="56.0" prefWidth="256.0" ripplerFill="RED" styleClass="menuButton" text="About">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fx:id="imgAbout" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/about_black.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="centerPane" prefHeight="666.0" prefWidth="666.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

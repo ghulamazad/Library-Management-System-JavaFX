@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.dashboard.DashboardController">
+   <children>
+      <BorderPane prefHeight="522.0" prefWidth="761.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="67.0" prefWidth="761.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" styleClass="flatAnchorWithEffect1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="6.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="664.0" text="DASHBOARD" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="Elephant" size="33.0" />
+                           </font>
+                        </Label>
+                        <JFXButton contentDisplay="CENTER" layoutX="649.0" layoutY="6.0" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" prefHeight="36.0" prefWidth="36.0" styleClass="searchButton" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="454.0" prefWidth="789.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane hgap="36.0" prefHeight="152.0" prefWidth="741.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="66.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="116.0" prefWidth="478.0" styleClass="flatAnchor">
+                           <children>
+                              <AnchorPane fx:id="totalBook3dAnchor" layoutX="74.0" layoutY="39.0" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="75.0" prefWidth="147.0" styleClass="flatAnchorWithEffect" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="46.0">
+                                 <children>
+                                    <Label fx:id="lblBook" text="View All Books" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Georgia" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="totalBookRoundAnchor" layoutY="23.0" maxHeight="106.0" maxWidth="106.0" minHeight="106.0" minWidth="106.0" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="106.0" prefWidth="106.0" styleClass="roundAnchor" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+                                 <children>
+                                    <ImageView fx:id="imgTotalBook" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="18.0" />
+                                 </children></AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="476.0" styleClass="flatAnchor" GridPane.columnIndex="1">
+                           <children>
+                              <AnchorPane fx:id="issue3dAnchor" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="75.0" prefWidth="147.0" styleClass="flatAnchorWithEffect" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="46.0">
+                                 <children>
+                                    <Label fx:id="lblIssue" text="View Issue Books" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Georgia" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="issueRoundAnchor" maxHeight="106.0" maxWidth="106.0" minHeight="106.0" minWidth="106.0" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="106.0" prefWidth="106.0" styleClass="roundAnchor" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+                                 <children>
+                                    <ImageView fx:id="imgIssueBook" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="18.0" />
+                                 </children></AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane prefHeight="116.0" prefWidth="476.0" styleClass="flatAnchor" GridPane.columnIndex="2">
+                           <children>
+                              <AnchorPane fx:id="returnBook3dAnchor" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="75.0" prefWidth="147.0" styleClass="flatAnchorWithEffect" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="46.0">
+                                 <children>
+                                    <Label fx:id="lblReturn" text="View Return Books" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Georgia" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="returnBookRoundAnchor" maxHeight="106.0" maxWidth="106.0" minHeight="106.0" minWidth="106.0" onMouseClicked="#anchorMouseClick" onMouseEntered="#anchorMouseEntered" onMouseExited="#anchorMouseExited" prefHeight="106.0" prefWidth="106.0" styleClass="roundAnchor" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+                                 <children>
+                                    <ImageView fx:id="imgRetrunBook" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="18.0" />
+                                 </children></AnchorPane>
+                           </children></AnchorPane>
+                     </children>
+                  </GridPane>
+                  <AnchorPane fx:id="dataReportViewer" layoutX="20.0" layoutY="197.0" prefHeight="200.0" prefWidth="677.0" styleClass="flatAnchorWithEffect1" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="236.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

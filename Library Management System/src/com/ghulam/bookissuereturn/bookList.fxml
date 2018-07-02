@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="670.0" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.bookissuereturn.BookList">
+   <top>
+      <AnchorPane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="63.0" prefWidth="600.0" text="Book List" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="451.0" layoutY="17.0" promptText="Search" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <JFXScrollPane style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="399.0" prefWidth="576.0">
+                    <columns>
+                      <TableColumn fx:id="colBookID" prefWidth="147.0" text="Book ID" />
+                      <TableColumn fx:id="colNameBook" minWidth="0.0" prefWidth="222.0" text="Title of Book" />
+                        <TableColumn fx:id="colAuthorName" prefWidth="137.0" text="Author's Name" />
+                        <TableColumn fx:id="colDescription" prefWidth="137.0" text="Description" />
+                        <TableColumn fx:id="colStock" prefWidth="137.0" text="No. of Book" />
+                        <TableColumn fx:id="colAction" prefWidth="71.0" text="Action" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </JFXScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnSubmit" buttonType="RAISED" defaultButton="true" onAction="#btnSubmitOnAction" prefHeight="46.0" prefWidth="116.0" styleClass="allButtons" text="Submit" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
