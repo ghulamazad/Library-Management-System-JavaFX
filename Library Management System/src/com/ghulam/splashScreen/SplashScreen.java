@@ -9,6 +9,7 @@ import com.ghulam.alert.MaterialDialog;
 import com.ghulam.database.Database;
 
 import javafx.animation.FadeTransition;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,7 +20,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 public class SplashScreen implements Initializable {
@@ -40,7 +40,18 @@ public class SplashScreen implements Initializable {
 		ft.setAutoReverse(true);
 		ft.play();
 		new Database().initDatabase();
-		openLogin();
+
+		Task<Void> task = new Task<>() {
+			@Override
+			protected Void call() throws Exception {
+
+				txtMsg.setText("Database successfully setup");
+				Thread.sleep(2000);
+				return null;
+			}
+		};
+		task.setOnSucceeded((e) -> openLogin());
+		new Thread(task).start();
 	}
 
 	private void openLogin() {
@@ -50,17 +61,11 @@ public class SplashScreen implements Initializable {
 			loader.load();
 			Parent parent = loader.getRoot();
 			Scene login = new Scene(parent, Color.TRANSPARENT);
-			Stage loginStage = new Stage();
-			loginStage.initStyle(StageStyle.TRANSPARENT);
+			Stage loginStage = (Stage) txtMsg.getScene().getWindow();
 			loginStage.setScene(login);
-			loginStage.centerOnScreen();
 			loginStage.show();
-			System.out.println(rootPane);
-			Stage stage = (Stage) rootPane.getScene().getWindow();
-			stage.close();
 		} catch (IOException e) {
 			MaterialDialog.DialogOK(stackPane, e.toString(), rootPane);
 		}
 	}
-
 }

@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="stackPane" prefHeight="325.0" prefWidth="679.0" styleClass="roundPane" stylesheets="@splashScreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.splashScreen.SplashScreen">
+<StackPane prefHeight="325.0" prefWidth="679.0" styleClass="roundPane" stylesheets="@splashScreen.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.splashScreen.SplashScreen">
    <children>
-      <AnchorPane id="ROOTNODE" fx:id="rootPane" prefHeight="307.0" prefWidth="683.0">
+      <AnchorPane id="ROOTNODE" prefHeight="307.0" prefWidth="683.0">
          <children>
             <Label id="txtMsg" fx:id="txtMsg" alignment="CENTER" layoutX="6.0" layoutY="136.0" prefHeight="53.0" prefWidth="660.0" text="Loading..." textFill="#fffffffa">
                <font>
