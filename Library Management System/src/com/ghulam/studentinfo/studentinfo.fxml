@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="567.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.studentinfo.StudentInfoController">
+<AnchorPane prefHeight="567.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ghulam.studentinfo.StudentInfoController">
    <children>
       <BorderPane prefHeight="528.0" prefWidth="731.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -129,7 +129,6 @@
                               <TableColumn fx:id="mobileCol" prefWidth="75.0" text="Mobile No." />
                               <TableColumn fx:id="addressCol" prefWidth="75.0" text="Address" />
                               <TableColumn fx:id="issueBookCol" prefWidth="75.0" text="No. of Issue Books" />
-                              <TableColumn fx:id="chechButton" prefWidth="75.0" text="Check Button" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

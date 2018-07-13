@@ -79,7 +79,6 @@ public class Database {
 	}
 
 	private static String getDbSystemPass() {
-		String pass = null;
 		TextInputDialog dialog = new TextInputDialog("Ghulam");
 		dialog.setTitle("Text Input Dialog");
 		dialog.setHeaderText(null);
@@ -182,7 +181,7 @@ public class Database {
 			pst.execute("create or replace TRIGGER  ISSUEBOOKDB_TRIGGER AFTER DELETE ON ISSUEBOOKDB FOR EACH ROW\n"
 					+ "DECLARE \n" + "    num STUDENTDB.ISSUEDBOOKS%type; \n" + "   stock BOOKDB.STOCK%type; \n"
 					+ "   CURSOR cs is SELECT ISSUEDBOOKS FROM STUDENTDB where id=:old.STUDENT_ID; \n"
-					+ "   CURSOR cs1 is SELECT ISSUEDBOOKS FROM STUDENTDB where id=:old.BOOK_ID; \n" + "BEGIN \n"
+					+ "   CURSOR cs1 is SELECT STOCK FROM BOOKDB where id=:old.BOOK_ID; \n" + "BEGIN \n"
 					+ "    OPEN cs; \n" + "   FETCH cs into num; \n"
 					+ "    UPDATE STUDENTDB SET ISSUEDBOOKS=(num-1) WHERE ID=:old.STUDENT_ID;\n" + "   CLOSE cs; \n"
 					+ "   OPEN cs1; \n" + "   FETCH cs1 into stock; \n"
@@ -194,8 +193,8 @@ public class Database {
 					"CREATE OR REPLACE TRIGGER  TRIGGER_ISSUEDBOOKS_UPDATION BEFORE INSERT ON ISSUEBOOKDB FOR EACH ROW\n"
 							+ "DECLARE \n" + "   num STUDENTDB.ISSUEDBOOKS%type; \n" + "   stock BOOKDB.STOCK%type; \n"
 							+ "   CURSOR cs is SELECT ISSUEDBOOKS FROM STUDENTDB where id=:new.STUDENT_ID; \n"
-							+ "   CURSOR cs1 is SELECT ISSUEDBOOKS FROM STUDENTDB where id=:new.BOOK_ID; \n"
-							+ "BEGIN \n" + "   OPEN cs; \n" + "   FETCH cs into num; \n"
+							+ "   CURSOR cs1 is SELECT STOCK FROM BOOKDB where id=:new.BOOK_ID; \n" + "BEGIN \n"
+							+ "   OPEN cs; \n" + "   FETCH cs into num; \n"
 							+ "    UPDATE STUDENTDB SET ISSUEDBOOKS=(num+1) WHERE ID=:NEW.STUDENT_ID;\n"
 							+ "   CLOSE cs; \n" + "   OPEN cs1; \n" + "   FETCH cs1 into stock; \n"
 							+ "    UPDATE BOOKDB SET STOCK=(stock-1) WHERE ID=:NEW.BOOK_ID;\n" + "   CLOSE cs1; \n"

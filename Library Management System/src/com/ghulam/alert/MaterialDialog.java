@@ -12,8 +12,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 
 public class MaterialDialog {
-	private final static int OK = 1;
-	private final static int CANCEL = 2;
 	private static boolean isOpen = false;
 	private BoxBlur blue;
 	private JFXDialogLayout dialogLayout;
