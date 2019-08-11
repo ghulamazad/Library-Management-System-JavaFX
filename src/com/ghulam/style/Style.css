@@ -1,0 +1,269 @@
+*{
+    -fx-primary: #ededed;
+    -fx-secondary:#8E24AA;
+    -fx-secondary-hover:#E0E0E0;
+    -fx-primary-text:white;
+    -fx-green:#76FF03;
+    -fx-yellow:#FFFF00;
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+
+.roundPane {
+    -fx-background-color:TRANSPARENT ;
+    -fx-background-radius: 26px;
+    -fx-border-radius:26px;
+}
+.button{
+    -fx-text-fill: -fx-primary-text;
+    -fx-font-size: 14px;
+}
+
+.button:hover{
+    -fx-cursor: hand;
+}
+/* Login css styling start here */
+.loginButton{
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.loginButton:hover{
+    -fx-border-color: -fx-yellow;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.text-field{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: WHITE;
+    -jfx-focus-color:-fx-green;
+    -jfx-unfocus-color:White;
+}
+.text-area{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: WHITE;
+    -jfx-focus-color:-fx-green;
+    -jfx-unfocus-color:White;
+    -fx-font-size: 15px;
+}
+.combo-box{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: WHITE;
+    -jfx-focus-color:-fx-green;
+    -jfx-unfocus-color:White;
+    -fx-font-size: 15px;
+}
+
+.combo-box-base,.list-cell{
+    -fx-background-color:-fx-secondary;
+    -fx-text-fill: white;
+}
+.list-cell:hover{
+    -fx-background-color: #1565C0;
+    -fx-text-fill: white;
+}
+
+.combo-box-base:disabled, .list-cell:disabled,.text-field:disabled,.text-area:disabled,.label:disabled{
+    -fx-opacity: 1;
+    -fx-text-fill: white;
+}
+/* Login css styling end here */
+
+/* Dashboard css styling start here.
+  these classes used in menu button manually through java code.
+  code see in MenuController Class.
+*/
+.menuPane{
+    -fx-background-color: WHITE;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 30, 0.30, 0, 10);
+}
+.menuButton{
+    -fx-background-color: WHITE;
+    -fx-text-fill: #757575;
+    -fx-font-size: 16px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.menuButtonHover{
+    -fx-background-color: #d6d6d6;
+    -fx-text-fill: #757575;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.menuButtonActive{
+    -fx-background-color: RED;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+
+/* Dashboard css styling end here */
+.searchButton{
+    -fx-background-color: white;
+    -fx-background-image: url("../images/search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-radius: 26px;
+    -fx-background-radius: 26px;
+}
+
+.searchButton:hover{
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.refreshButton{
+    -fx-background-color: white;
+    -fx-background-image: url("../images/refresh.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-radius: 26px;
+    -fx-background-radius: 26px;
+}
+
+.refreshButton:hover{
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+
+.allButtons{
+    -fx-background-color: #42A5F5;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color:#42A5F5 ;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-height: 26;
+    -fx-max-height: 26;
+    -fx-min-width: 64;
+    -fx-padding: 8;
+}
+.allButtons:hover{
+    -fx-background-color: #1565C0;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color:#1565C0 ;
+    -fx-text-fill: white;
+}
+
+.flatAnchor{
+    -fx-background-color: #8E24AA;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+}
+.flatAnchorWithEffect{
+    -fx-background-color: #00b9ff;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.roundAnchor{
+    -fx-background-color: #00b9ff;
+    -fx-background-size: 66px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-radius: 53px;
+    -fx-background-radius: 53px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.flatAnchorWithEffect:hover{
+    -fx-cursor: hand;
+}
+.roundAnchor:hover{
+    -fx-cursor: hand;
+}
+
+.flatAnchorWithEffect1{
+    -fx-background-color: #8E24AA;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow( GAUSSIAN , rgba(0, 0, 0, 0.26), 15, 0.16, 0, 4);
+}
+.titled-pane:disabled,*.content,.title
+{
+    -fx-opacity: 1;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill:white;
+}
+
+.jfx-date-picker{
+    -jfx-default-color: white;
+}
+.date-picker-popup.label:focused{
+    -fx-background-color: #e9e9e9;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-spacing: 0.25em; /* 3 */
+    -fx-alignment: CENTER;
+    -fx-fill-height: false;
+    -fx-background-color: red;
+}
+
+/* table view Style codding start here*/
+.tabledialog-button-view{
+    -fx-background-color: transparent;
+    -fx-border-color: WHITE;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+    -fx-border-color: WHITE;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #8E24AA;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+.table-row-cell:selected {
+    -fx-background-color: grey;
+}
+
+.jfx-date-picker{
+    -jfx-default-color: white;
+}
+/* table view Style codding end here*/
+
+/* Tab Style codding end here*/
+.tab{
+    -fx-background-color: #8E24AA;
+    -fx-pref-width: 356px;
+    -fx-pref-height: 56px;
+    -fx-background-radius: 16 16 16 16, 0 0 0 0, 0 0 0 0;
+    -fx-border-radius: 16 16 16 16, 0 0 0 0;
+}
+.tab:hover{
+    -fx-cursor: hand;
+}
+.tab-header-background{
+    -fx-background-color: #8E24AA;
+    -fx-background-radius: 16 16 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-border-radius: 16 16 0 0, 0 0 0 0;
+}
+/* Tab Style codding end here*/
