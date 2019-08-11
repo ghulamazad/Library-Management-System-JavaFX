@@ -2,9 +2,9 @@
 
 ## This Project Running on
 
-JavaFX
-JDK Version : 10
-Oracle 11g Express Edition
+- JavaFX
+- JDK Version : 10
+- Oracle 11g Express Edition
 
 ![Splash Screen](screenshots/SplashScreen.PNG)
 ![Login Form](screenshots/loginscreen.PNG)
