@@ -6,4 +6,4 @@ JavaFX
 JDK Version : 10
 Oracle 11g Express Edition
 
-![](screenshots/SplashScreen.png)
+![Splash Screen](screenshots/SplashScreen.png)
